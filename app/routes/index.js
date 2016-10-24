@@ -1,8 +1,12 @@
 import Ember from 'ember';
 
+
 export default Ember.Route.extend({
   model() { //model hook
-    return this.store.findAll('rental');
+    return Ember.RSVP.hash({
+      rentals: this.store.findAll('rental'),
+      messages: this.store.findAll('message')
+    });
   },
 
   actions: {

@@ -1,9 +1,15 @@
 <h1> Welcome to Super Rentals</h1>
 
+<ul>
+{{#each model.messages as |message|}}
+  <li>{{message.text}}</li>
+{{/each}}
+</ul>
+
 <p>We hope you find exactly what you're looking for in a place to stay.</p>
 
 <ul>
-  {{#each model as |rental|}}
+  {{#each model.rentals as |rental|}}
     {{rental-tile rental=rental destroyRental="destroyRental"}}
   {{/each}}
 </ul>
