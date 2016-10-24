@@ -1,0 +1,47 @@
+img {
+  width: 100%;
+}
+
+* {
+  color: white;
+}
+
+body {
+  background-image: url("http://media.vogue.com/r/pass/2016/09/13/00-holding-chateau-de-gudanes.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  width: 50%;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+.well {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.rentals {
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 5px;
+}
+
+.messages {
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 5px;
+}
+
+.footer {
+  margin: 10px;
+}

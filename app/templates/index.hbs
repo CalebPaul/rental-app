@@ -1,21 +1,29 @@
-<h1> Welcome to Super Rentals</h1>
+<div class="container">
+  <div class="row">
 
-<ul>
-{{#each model.messages as |message|}}
-  {{message-tile message=message destroyMessage="destroyMessage"}}
-{{/each}}
-</ul>
-{{new-message saveMessage="saveMessage"}}
-
-<p>We hope you find exactly what you're looking for in a place to stay.</p>
-
-<ul>
-  {{#each model.rentals as |rental|}}
-    {{rental-tile rental=rental destroyRental="destroyRental"}}
-  {{/each}}
-</ul>
-
-{{new-rental saveRental2="saveRental3"}}
-
-{{#link-to 'about'}}About{{/link-to}}<br>
-{{#link-to 'contact'}}Click here to contact us.{{/link-to}}
+    <div class="well text-center">
+      <h1> Welcome to Super Rentals</h1>
+      <p>We hope you find exactly what you're looking for.</p>
+    </div>
+    <div class="rentals col-sm-4">
+      <ul>
+        {{#each model.rentals as |rental|}}
+          {{rental-tile rental=rental destroyRental="destroyRental"}}
+        {{/each}}
+      </ul>
+      {{new-rental saveRental2="saveRental3"}}
+    </div>
+    <div class="messages col-sm-4 col-sm-offset-1">
+      <ul>
+      {{#each model.messages as |message|}}
+        {{message-tile message=message destroyMessage="destroyMessage"}}
+      {{/each}}
+      </ul>
+      {{new-message saveMessage="saveMessage"}}
+    </div>
+  </div>
+  <div class="footer">
+    {{#link-to 'about'}}About{{/link-to}}<br>
+    {{#link-to 'contact'}}Click here to contact us.{{/link-to}}
+  </div>
+</div>
