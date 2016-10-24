@@ -2,9 +2,10 @@
 
 <ul>
 {{#each model.messages as |message|}}
-  <li>{{message.text}}</li>
+  {{message-tile message=message destroyMessage="destroyMessage"}}
 {{/each}}
 </ul>
+{{new-message saveMessage="saveMessage"}}
 
 <p>We hope you find exactly what you're looking for in a place to stay.</p>
 
